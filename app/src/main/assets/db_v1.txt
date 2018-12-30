@@ -1,0 +1,15 @@
+CREATE TABLE t_category (
+	id LONG NOT NULL PRIMARY KEY,
+	name varchar(255) NOT NULL
+)
+---
+CREATE TABLE t_account (
+   id LONG NOT NULL PRIMARY KEY,
+   categoryId LONG NOT NULL,
+   createTime datetime,
+   name varchar(255) NOT NULL,
+   account varchar(255)  NOT NULL,
+   password varchar(255) NOT NULL,
+   memo MEDIUMTEXT,
+   foreign key(categoryId) references t_category(id_p)
+)
