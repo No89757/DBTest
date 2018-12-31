@@ -11,5 +11,5 @@ CREATE TABLE t_account (
    account varchar(255)  NOT NULL,
    password varchar(255) NOT NULL,
    memo MEDIUMTEXT,
-   foreign key(categoryId) references t_category(id_p)
+   foreign key(categoryId) references t_category(id)
 )

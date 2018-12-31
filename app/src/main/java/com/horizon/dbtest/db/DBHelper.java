@@ -119,8 +119,6 @@ public class DBHelper {
                 try {
                     statement.executeInsert();
                 } catch (SQLiteConstraintException e) {
-                    // 数据库损坏后，不根据索引存在主键id重复，非空约束字段出现空等情况
-                    // 碰到这类情况，忽略这些违反约束的记录
                     LogUtil.e(TAG, e);
                 }
                 statement.clearBindings();
